@@ -16,6 +16,4 @@ module "kubeflow-cluster" {
   project = "tfx-goof"
   subnetwork = "us-central1-01"
   upstream_nameservers = "8.8.8.8"
-
-  depends_on = [google_compute_network.vpc_kubeflow]
 }
