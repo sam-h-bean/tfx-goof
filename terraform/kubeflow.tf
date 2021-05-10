@@ -12,8 +12,10 @@ module "kubeflow-cluster" {
   main_node_pool_name = "goof-main-pool"
   mysql_developer_password = var.mysql_password
   mysql_read_only_user_password = var.mysql_readonly_password
-  network = "vpc-01"
+  network = "vpc-kubeflow"
   project = "tfx-goof"
   subnetwork = "us-central1-01"
   upstream_nameservers = "8.8.8.8"
+
+  depends_on = [google_compute_network.vpc_kubeflow]
 }
