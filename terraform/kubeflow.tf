@@ -10,8 +10,8 @@ module "kubeflow-cluster" {
   main_node_pool_max_nodes = "5"
   main_node_pool_min_nodes = "1"
   main_node_pool_name = "goof-main-pool"
-  mysql_developer_password = "goofygoober"
-  mysql_read_only_user_password = "goofygooberreadonly"
+  mysql_developer_password = var.mysql_password
+  mysql_read_only_user_password = var.mysql_readonly_password
   network = "vpc-01"
   project = "tfx-goof"
   subnetwork = "us-central1-01"
