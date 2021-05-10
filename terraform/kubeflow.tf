@@ -12,8 +12,8 @@ module "kubeflow-cluster" {
   main_node_pool_name = "goof-main-pool"
   mysql_developer_password = "goofygoober"
   mysql_read_only_user_password = "goofygooberreadonly"
-  network = "abc"
+  network = "vpc-01"
   project = "tfx-goof"
-  subnetwork = "def"
+  subnetwork = "us-central1-01"
   upstream_nameservers = "8.8.8.8"
 }
