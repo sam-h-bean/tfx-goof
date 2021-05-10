@@ -18,6 +18,7 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - name: Setup Kubernetes CLI
         uses: azure/setup-kubectl@v1
+        id: install
       - name: Terraform Init
         id: init
         run: terraform -chdir=terraform init
